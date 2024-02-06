@@ -11,7 +11,7 @@ function Header () {
                 <a href=''>Projects</a>
             </span>
             <span className='navLink'>
-                <a href=''>Contacts</a>
+                <a href='#contact'>Contacts</a>
             </span>
         </div>
     )

@@ -1,5 +1,6 @@
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import ContactForm from './components/ContactForm/ContactForm';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <header className="App-header">
         😶‍🌫️
       </header>
+      <ContactForm />
       <Footer />
     </div>
   );
