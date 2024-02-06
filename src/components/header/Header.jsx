@@ -5,10 +5,10 @@ function Header () {
     return (
         <div className='navContainer'>
             <span className='navLink'>
-                <a href=''>home</a>
+                <a href='#home'>home</a>
             </span>
             <span className='navLink'>
-                <a href=''>Projects</a>
+                <a href='#project'>Projects</a>
             </span>
             <span className='navLink'>
                 <a href='#contact'>Contacts</a>
