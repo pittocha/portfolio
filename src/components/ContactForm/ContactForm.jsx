@@ -24,21 +24,21 @@ const ContactForm = () => {
         alert(result.status);
     };
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
+        <div className='contact' id='contact'>
+        <form onSubmit={handleSubmit} className='contact-form'>
+
                 <label htmlFor='name'>Nom:</label>
                 <input type='text' id='name' required />
-            </div>
-            <div>
+
                 <label htmlFor='email'>Email:</label>
                 <input type='email' id='email' required />
-            </div>
-            <div>
+
                 <label htmlFor='message'>Message:</label>
                 <textarea id='message' required />
-            </div>
+
             <button type='submit'>{status}</button>
         </form>
+        </div>
     );
 };
 
