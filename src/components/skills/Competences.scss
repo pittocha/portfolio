@@ -1,0 +1,19 @@
+.skills {
+    margin-left: auto;
+    margin-right: auto;
+    .skillHead {
+        font-size: larger;
+        color: white;
+        margin-top: 150px;
+    }
+    .skillsTitle {
+        color: white;
+        margin-top: 50px;
+    }
+    .skillIcon {
+        padding: 5px;
+        margin-left: 10px;
+        background-color: grey;
+        border-radius: 25px;
+    }
+}

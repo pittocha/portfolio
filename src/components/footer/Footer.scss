@@ -2,13 +2,13 @@
 .social-icons {
     color: white;
     margin: 10px;
+    .social-link {
+        margin: 15px;
+    }
+    
+    .social-link svg {
+        height: 25px;
+        width: 25px;
+    }
 }
 
-.social-link {
-    margin: 15px;
-}
-
-.social-link svg {
-    height: 25px;
-    width: 25px;
-}
