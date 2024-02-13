@@ -3,6 +3,7 @@ import Footer from './components/footer/Footer';
 import ContactForm from './components/ContactForm/ContactForm';
 import AboutMe from './components/AboutMe/AboutMe';
 import Competences from './components/skills/Competences';
+import Projects from './components/Projects/Projects';
 import './App.css';
 
 
@@ -13,9 +14,7 @@ function App() {
       <Header />
       <AboutMe />
       <Competences />
-      <header className="App-header">
-        😶‍🌫️
-      </header>
+      <Projects />
       <ContactForm />
       <Footer />
     </div>

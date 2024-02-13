@@ -1,6 +1,7 @@
 .contact {
     max-width: 500px;
     margin: 0 auto;
+    margin-top: 150px;
 }
 
 .contact-form {
@@ -18,9 +19,28 @@
 
 .contact-form button {
     font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
 }
 
 .contact-form label {
     text-align: start;
     color: white;
+}
+.contact-form textarea {
+    height: 6em;
+}
+.contact-form input, textarea {
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contact-form ::placeholder {
+    color: white;
+}
+
+.contact-form input:focus, textarea:focus {
+    background-color: white;
 }
