@@ -28,13 +28,13 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className='contact-form'>
 
                 <label htmlFor='name'>Nom:</label>
-                <input type='text' id='name' required />
+                <input type='text' id='name' required placeholder='Nom'/>
 
                 <label htmlFor='email'>Email:</label>
-                <input type='email' id='email' required />
+                <input type='email' id='email' required placeholder='Email' />
 
                 <label htmlFor='message'>Message:</label>
-                <textarea id='message' required />
+                <textarea id='message' required placeholder='Votre message...' />
 
             <button type='submit'>{status}</button>
         </form>
