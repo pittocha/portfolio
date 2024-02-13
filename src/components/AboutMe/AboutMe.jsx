@@ -3,7 +3,7 @@ import './AboutMe.scss'
 
 function AboutMe () {
     return (
-        <div className="presentation" id="home">
+        <div className="presentation">
         <h1>Nicolas Martinez</h1>
         <p>Développeur/intégrateur web.
            Je travaille en HTML, CSS, JavaScript, REACT et nodejs,
