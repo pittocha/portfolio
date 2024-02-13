@@ -5,7 +5,7 @@ function Header () {
     return (
         <div className='navContainer'>
             <span className='navLink'>
-                <a href='#home'>home</a>
+                <a href='#top'>home</a>
             </span>
             <span className='navLink'>
                 <a href='#project'>Projects</a>
