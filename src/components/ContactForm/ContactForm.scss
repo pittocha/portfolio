@@ -30,6 +30,10 @@
 }
 .contact-form textarea {
     height: 6em;
+    color: white;
+}
+.contact-form input {
+    color: white;
 }
 .contact-form input, textarea {
     background-color: #222;
@@ -43,4 +47,5 @@
 
 .contact-form input:focus, textarea:focus {
     background-color: white;
+    color: black;
 }
