@@ -3,6 +3,10 @@ import './Projects.scss';
 import BluelCard from '../../assets/imgbluel/0index.webp';
 import KasaCard from '../../assets/kasaimg/0index.webp';
 import GrimmoireCard from '../../assets/grimoireimg/0index.webp';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const bluelImages = require.context('../../assets/imgbluel/', false, /\.(webp)$/)
 const bluelGallery = bluelImages.keys().map(bluelImages);
@@ -43,15 +47,47 @@ function Projects () {
         setModalOpen(false);
     };
 
+    function NextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{...style, display: "block", background: "black", borderRadius: "100%"}}
+                onClick={onClick}
+            />
+        )
+    }
+
+    function PreviousArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{...style, display: "block", background: "black", borderRadius: "100%",}}
+                onClick={onClick}
+            />
+        )
+    }
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slideToShow: 1,
+        slideToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PreviousArrow />
+    }
+
     const ProjectModal = ({ project }) => (
         <div className='modal-overlay'>
         <div ref={modalRef} className='modal'>
             <button onClick={closeModal} className='close-button'>Fermer</button>
-            <div className='gallery'>
+                <Slider className='gallery' {...settings}>
                     {project.gallery.map((image, index) => (
                         <img key={index} className='modal-image' src={image} alt={`${index}`} />
                     ))}
-                </div>
+                </Slider>
             <p className='modal-description'>{project.description}</p>
             <a href={project.githubRepo} target='_blank' rel='noopener noreferrer'><button className='github-button'  target='_blank' rel='noopener noreferrer'>Voir sur github</button></a>
         </div>
