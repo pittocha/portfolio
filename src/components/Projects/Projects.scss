@@ -65,12 +65,24 @@
     background-color: transparent;
     color: #222;
     border: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
 }
-
+.modal .github-button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: bisque;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .modal-image {
     max-width: 100%;
     border-radius: 5px;
+    border: 1px solid gray;
 }
 
 .modal p {
@@ -84,4 +96,10 @@
     margin-right: auto;
     max-width: fit-content;
     color: #222;
+}
+
+.modal-description {
+    padding-top: 15px;
+    align-self: center;
+    max-width: 400px;
 }
