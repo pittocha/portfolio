@@ -25,6 +25,7 @@ const ContactForm = () => {
     };
     return (
         <div className='contact' id='contact'>
+        <p className='contact-title'>Pour me contacter:</p>
         <form onSubmit={handleSubmit} className='contact-form'>
 
                 <label htmlFor='name'>Nom:</label>

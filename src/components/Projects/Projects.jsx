@@ -1,8 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Projects.scss';
-import BluelCard from '../../assets/imgbluel/index.webp';
-import KasaCard from '../../assets/kasaimg/index.webp';
-import GrimmoireCard from '../../assets/grimoireimg/index.webp';
+import BluelCard from '../../assets/imgbluel/0index.webp';
+import KasaCard from '../../assets/kasaimg/0index.webp';
+import GrimmoireCard from '../../assets/grimoireimg/0index.webp';
+
+const bluelImages = require.context('../../assets/imgbluel/', false, /\.(webp)$/)
+const bluelGallery = bluelImages.keys().map(bluelImages);
+
+const kasaImages = require.context('../../assets/kasaimg/', false, /\.(webp)$/)
+const kasaGallery = kasaImages.keys().map(kasaImages);
+
+const grimmoireImage = require.context('../../assets/grimoireimg/', false, /\.(webp)$/)
+const grimmoireGallery = grimmoireImage.keys().map(grimmoireImage);
 
 function Projects () {
     const [modalOpen, setModalOpen] = useState(false);
@@ -38,9 +47,13 @@ function Projects () {
         <div className='modal-overlay'>
         <div ref={modalRef} className='modal'>
             <button onClick={closeModal} className='close-button'>Fermer</button>
-            <img className='modal-image' src={project.image} alt={project.title} />
-            <p>{project.description}</p>
-            <a href={project.githubRepo} target='_blank' rel='noopener noreferrer'>Voir sur github</a>
+            <div className='gallery'>
+                    {project.gallery.map((image, index) => (
+                        <img key={index} className='modal-image' src={image} alt={`${index}`} />
+                    ))}
+                </div>
+            <p className='modal-description'>{project.description}</p>
+            <a href={project.githubRepo} target='_blank' rel='noopener noreferrer'><button className='github-button'  target='_blank' rel='noopener noreferrer'>Voir sur github</button></a>
         </div>
         </div>
     );
@@ -49,20 +62,24 @@ function Projects () {
         {
             title: 'Site codé en javascript',
             image: BluelCard,
-            description: 'description',
-            githubRepo: 'https://github.com/pittocha/sophiebluel'
+            description: 'Recupérater des données utilisateur via des formulaires, Manipuler les éléments du DOM, gérer les événements utilisateur avec javascript',
+            githubRepo: 'https://github.com/pittocha/sophiebluel',
+            gallery: bluelGallery
         },
         {
             title: 'Site codé gràce à React',
             image: KasaCard,
-            description: 'description',
-            githubRepo: 'https://github.com/pittocha/Kasa'
+            description: 'Configurer ls navigation avec React Router, Développer les éléments du site avec des composants React',
+            githubRepo: 'https://github.com/pittocha/Kasa',
+            gallery: kasaGallery
+
         },
         {
             title: 'Backend du site codé en Node.js',
             image: GrimmoireCard,
-            description: 'description',
-            githubRepo: 'https://github.com/pittocha/grimoireback'
+            description: "Mettre en œuvre les opération crud de manière sécurisé, stocker des données de manière sécurisé, Implémenter un système d'authentification sécurisé, gérer l'optimisation de fichier avec multer et sharp",
+            githubRepo: 'https://github.com/pittocha/grimoireback',
+            gallery: grimmoireGallery
         }
     ]
     
