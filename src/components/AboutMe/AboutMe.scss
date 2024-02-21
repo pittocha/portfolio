@@ -1,7 +1,29 @@
 .presentation {
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     color: white;
-    max-width: 500px;
+    max-width: 1080px;
     margin-top: 150px;
+}
+
+.presentation-text {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-illustration {
+        max-width: 90%;
+    }
+    .presentation-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

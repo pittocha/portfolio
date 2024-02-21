@@ -24,3 +24,10 @@ a {
         border-radius: 99px;
     }
 }
+
+@media (max-width: 768px) {
+    .navContainer {
+        left: 2%;
+        right: 0%;
+    }
+}

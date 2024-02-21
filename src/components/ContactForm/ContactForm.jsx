@@ -1,5 +1,6 @@
 import './ContactForm.scss';
 import { useState } from 'react';
+import mailIllustration from '../../assets/banque-d-images-gratuites-libres-de-droits613-removebg-preview.png'
 
 const ContactForm = () => {
     const [status, setStatus] = useState("Envoyer");
@@ -24,8 +25,13 @@ const ContactForm = () => {
         alert(result.status);
     };
     return (
-        <div className='contact' id='contact'>
+        <div id='contact'>
         <p className='contact-title'>Pour me contacter:</p>
+        <div className='contact'>
+        <div className='contact-illustration'>
+        <p className='mail'>par mail: <a href='kurulimpah@gmail.com'> kurulimpah@gmail.com</a> ou via le formulaire</p>
+        <img src={mailIllustration} className='mail-img' alt='illustration mail'/>
+        </div>
         <form onSubmit={handleSubmit} className='contact-form'>
 
                 <label htmlFor='name'>Nom:</label>
@@ -39,6 +45,7 @@ const ContactForm = () => {
 
             <button type='submit'>{status}</button>
         </form>
+        </div>
         </div>
     );
 };

@@ -76,6 +76,7 @@
     margin-right: auto;
     border: none;
     background-color: bisque;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -108,4 +109,20 @@
     margin-left: 30px;
     margin-top: 15px;
     max-width: 90%;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-card {
+        max-width: 95%;
+        .project-img {
+            max-width: 100%;
+        }
+    }
+    .modal {
+        max-width: 80%;
+    }
 }
