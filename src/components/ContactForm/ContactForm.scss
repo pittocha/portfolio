@@ -1,16 +1,37 @@
 .contact-title {
+    margin-top: 80px;
     color: white;
 }
 
+.mail-img {
+    max-height: 300px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-illustration { 
+    display: flex;
+    flex-direction: column;
+}
+
 .contact {
-    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 15px;
+}
+
+.mail {
+    color: white;
+    margin-right: 30px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
+    width: 500px;
     padding: 1rem;
 }
 
@@ -52,4 +73,14 @@
 .contact-form input:focus, textarea:focus {
     background-color: white;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form {
+        max-width: 90%;
+    }
 }
