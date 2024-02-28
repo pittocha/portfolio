@@ -76,7 +76,15 @@ function Projects () {
         slideToShow: 1,
         slideToScroll: 1,
         nextArrow: <NextArrow />,
-        prevArrow: <PreviousArrow />
+        prevArrow: <PreviousArrow />,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     }
 
     const ProjectModal = ({ project }) => (
@@ -96,14 +104,14 @@ function Projects () {
 
     const projects = [
         {
-            title: 'Site codé en javascript',
+            title: 'portfolio de photographe en javascript',
             image: BluelCard,
             description: 'Recupérater des données utilisateur via des formulaires, Manipuler les éléments du DOM, gérer les événements utilisateur avec javascript',
             githubRepo: 'https://github.com/pittocha/sophiebluel',
             gallery: bluelGallery
         },
         {
-            title: 'Site codé gràce à React',
+            title: "front-end d'un site de reservation en React",
             image: KasaCard,
             description: 'Configurer ls navigation avec React Router, Développer les éléments du site avec des composants React',
             githubRepo: 'https://github.com/pittocha/Kasa',
@@ -111,7 +119,7 @@ function Projects () {
 
         },
         {
-            title: 'Backend du site codé en Node.js',
+            title: "Backend d'un' site de notation de livres en Node.js",
             image: GrimmoireCard,
             description: "Mettre en œuvre les opération crud de manière sécurisé, stocker des données de manière sécurisé, Implémenter un système d'authentification sécurisé, gérer l'optimisation de fichier avec multer et sharp",
             githubRepo: 'https://github.com/pittocha/grimoireback',

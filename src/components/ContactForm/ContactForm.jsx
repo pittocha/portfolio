@@ -16,9 +16,9 @@ const ContactForm = () => {
         let response = await fetch('http://localhost:5000/contact', {
             method: "POST",
             headers: {
-                "Content-Type": "application/json;charset=utf-8",
+                "Content-Type": "application/x-www-form-urlencoded",
             },
-            body: JSON.stringify(details),
+            body: new URLSearchParams(details).toString(),
         });
         setStatus("Envoyer");
         let result = await response.json();
