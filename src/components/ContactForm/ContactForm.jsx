@@ -21,13 +21,13 @@ const ContactForm = () => {
         let response = await fetch('/.netlify/functions/contact', {
             method: "POST",
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
+                "Content-Type": "application/json",
             },
-            body: new URLSearchParams(details).toString(),
+            body: JSON.stringify(details),
         });
         setStatus("Envoyer");
-        let result = await response.text();
-        alert(result);
+        let result = await response.json();
+        alert(result.status);
     };
     return (
         <div id='contact'>
