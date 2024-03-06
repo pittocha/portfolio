@@ -7,12 +7,17 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Envoi...');
-        const { name, email, message } = e.target.element;
+        
+        const name = e.target.elements.name.value;
+        const email = e.target.elements.email.value;
+        const message = e.target.elements.message.value;
+        
         let details = {
-            name: name.value,
-            email: email.value,
-            message: message.value,
+            name: name,
+            email: email,
+            message: message,
         };
+        
         let response = await fetch('/.netlify/functions/contact', {
             method: "POST",
             headers: {
