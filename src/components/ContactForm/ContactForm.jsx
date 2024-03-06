@@ -7,25 +7,23 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Envoi...');
-        const { name, email, message } = e.target.elements;
+        const { name, email, message } = e.target.element;
         let details = {
             name: name.value,
             email: email.value,
             message: message.value,
         };
-        let response = await fetch('http://localhost:5000/contact', {
+        let response = await fetch('/.netlify/functions/contact', {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             },
             body: new URLSearchParams(details).toString(),
         });
-
         setStatus("Envoyer");
         let result = await response.json();
         alert(result.status);
     };
-    
     return (
         <div id='contact'>
         <p className='contact-title'>Pour me contacter:</p>
