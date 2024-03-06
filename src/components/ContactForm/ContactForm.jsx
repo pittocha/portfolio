@@ -26,8 +26,8 @@ const ContactForm = () => {
             body: new URLSearchParams(details).toString(),
         });
         setStatus("Envoyer");
-        let result = await response.json();
-        alert(result.status);
+        let result = await response.text();
+        alert(result);
     };
     return (
         <div id='contact'>
