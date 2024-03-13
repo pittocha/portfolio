@@ -34,7 +34,7 @@ const ContactForm = () => {
         <p className='contact-title'>Pour me contacter:</p>
         <div className='contact'>
         <div className='contact-illustration'>
-        <p className='mail'>par mail: <a href='kurulimpah@gmail.com'> kurulimpah@gmail.com</a> ou via le formulaire</p>
+        <p className='mail'>par mail: <a href='mailto:kurulimpah@gmail.com'> kurulimpah@gmail.com</a> ou via le formulaire</p>
         <img src={mailIllustration} className='mail-img' alt='illustration mail'/>
         </div>
         <form onSubmit={handleSubmit} className='contact-form'>
