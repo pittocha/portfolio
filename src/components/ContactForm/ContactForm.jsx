@@ -7,7 +7,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Envoi...');
-        
+        //récupération des entrés du formulaire
         const name = e.target.elements.name.value;
         const email = e.target.elements.email.value;
         const message = e.target.elements.message.value;
@@ -17,6 +17,7 @@ const ContactForm = () => {
             email: email,
             message: message,
         };
+        //try catch pour l'envoi du formulaire
         try {
         let response = await fetch('/.netlify/functions/contact', {
             method: "POST",
@@ -26,6 +27,7 @@ const ContactForm = () => {
             body: JSON.stringify(details),
         });
         setStatus("Envoyer");
+        // gestion de la reponse de la requette
         if (response.ok) {
             let result = await response.json();
             alert(result.message);
