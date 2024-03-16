@@ -118,7 +118,7 @@ function Projects () {
 
         },
         {
-            title: "Backend d'un' site de notation de livres en Node.js",
+            title: "Backend d'un site de notation de livres en Node.js",
             image: GrimmoireCard,
             description: "Mettre en œuvre les opération crud de manière sécurisé, stocker des données de manière sécurisé, Implémenter un système d'authentification sécurisé, gérer l'optimisation de fichier avec multer et sharp",
             githubRepo: 'https://github.com/pittocha/grimoireback',
