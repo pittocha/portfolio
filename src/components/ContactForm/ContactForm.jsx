@@ -26,21 +26,16 @@ const ContactForm = () => {
             body: JSON.stringify(details),
         });
         setStatus("Envoyer");
-        let result = await response.json();
-        //gestion des erreur et de l'alerte aprées l'envoi de l'email
-        if (result.ok) {
-            if (result.message === 'Email envoyé') {
-                alert('Email envoyé');
-            } else {
-                alert("Erreur lors de l'envoi de l'email");
-            }
+        if (response.ok) {
+            let result = await response.json();
+            alert(result.message);
         } else {
+            alert("Erreur lors de l'envoi de l'email")
+        }
+        } catch (error) {
+            console.error("Erreur lors de l'envoi de l'email:", error);
             alert("Erreur lors de l'envoi de l'email");
         }
-    } catch (error) {
-        console.error("Erreur lors de l'envoi de l'email:", error);
-        alert("Erreur lors de l'envoi de l'email:");
-    }
     };
     return (
         <div id='contact'>
