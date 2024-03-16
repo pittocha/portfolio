@@ -72,7 +72,7 @@ function Competences () {
             <img className='skillIcon' src={apache} alt='logo apache' />
             </Tooltip>
             <ul className='skill-details'>
-                <li>Configurer un serveur http pourl'hebergement d'un site statique</li>
+                <li>Configurer un serveur http pour l'hebergement d'un site statique</li>
             </ul>
             </div>
             <div className='skill-box'>

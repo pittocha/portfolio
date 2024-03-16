@@ -21,12 +21,11 @@ function Projects () {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
     const modalRef = useRef();
-
+    //ce useeffect permet de fermer le modal quand on clique en dehors de la fenetre
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (modalRef.current && !modalRef.current.contains(event.target)) {
                 closeModal();
-                console.log(event,'click outside')
             }
         };
 
@@ -68,7 +67,7 @@ function Projects () {
             />
         )
     }
-
+    //objet de configuration de react-slick
     const settings = {
         dots: true,
         infinite: true,
@@ -101,7 +100,7 @@ function Projects () {
         </div>
         </div>
     );
-
+    //liste des data des projets, pour ajouter un projet il n'y à plus qu'à suivre le modèle
     const projects = [
         {
             title: 'portfolio de photographe en javascript',
