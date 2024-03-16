@@ -17,7 +17,7 @@ const ContactForm = () => {
             email: email,
             message: message,
         };
-        
+        try {
         let response = await fetch('/.netlify/functions/contact', {
             method: "POST",
             headers: {
@@ -27,7 +27,20 @@ const ContactForm = () => {
         });
         setStatus("Envoyer");
         let result = await response.json();
-        alert(result.status);
+        //gestion des erreur et de l'alerte aprées l'envoi de l'email
+        if (result.ok) {
+            if (result.message === 'Email envoyé') {
+                alert('Email envoyé');
+            } else {
+                alert("Erreur lors de l'envoi de l'email");
+            }
+        } else {
+            alert("Erreur lors de l'envoi de l'email");
+        }
+    } catch (error) {
+        console.error("Erreur lors de l'envoi de l'email:", error);
+        alert("Erreur lors de l'envoi de l'email:");
+    }
     };
     return (
         <div id='contact'>
