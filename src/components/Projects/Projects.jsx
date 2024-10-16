@@ -105,7 +105,7 @@ function Projects () {
         {
             title: 'portfolio de photographe en javascript',
             image: BluelCard,
-            description: "Recupérater des données utilisateur via des formulaires, Manipuler les éléments du DOM, gérer les événements utilisateur avec javascript. Le plus gros chalenge que j'ai rencontré sur ce projet etait le codage du modal from scratch en javascript natif.",
+            description: "Recupérer des données utilisateur via des formulaires, Manipuler les éléments du DOM, gérer les événements utilisateur avec javascript. Le plus gros chalenge que j'ai rencontré sur ce projet etait le codage du modal from scratch en javascript natif.",
             githubRepo: 'https://github.com/pittocha/sophiebluel',
             gallery: bluelGallery
         },
@@ -120,7 +120,7 @@ function Projects () {
         {
             title: "Backend d'un site de notation de livres en Node.js",
             image: GrimmoireCard,
-            description: "Mettre en œuvre les opération crud de manière sécurisé, stocker des données de manière sécurisé, Implémenter un système d'authentification sécurisé, gérer l'optimisation de fichier avec multer et sharp.Dans le projet Back End la plus grosse dificultée etait l'integration d'outils de grenn code ici multer qui est un outils relativement puissant et qui à nécessité un certain temps d'apprentissage pour comprendre l'étendue des possibilité qu'il offre.",
+            description: "Mettre en œuvre les opération crud de manière sécurisé, stocker des données de manière sécurisé, Implémenter un système d'authentification sécurisé, gérer l'optimisation de fichier avec multer et sharp.Dans le projet Back End la plus grosse dificultée etait l'integration d'outils de green code ici multer qui est un outils relativement puissant et qui à nécessité un certain temps d'apprentissage pour comprendre l'étendue des possibilité qu'il offre.",
             githubRepo: 'https://github.com/pittocha/grimoireback',
             gallery: grimmoireGallery
         }
